@@ -1,10 +1,14 @@
 {
   "name": "homebridge-rpi-rts",
-  "version": "1.0.0",
   "description": "A Homebridge plugin to control any device with the Somfy RTS technology with a Raspberry Pi connected to a simple 433 MHz transmitter.",
+  "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wibberryd/homebridge-rpi-rts.git"
   },
   "keywords": [
     "homebridge-plugin",
@@ -16,6 +20,10 @@
   ],
   "author": "wibberryd",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wibberryd/homebridge-rpi-rts/issues"
+  },
+  "homepage": "https://github.com/wibberryd/homebridge-rpi-rts",
   "engines": {
     "homebridge": ">=0.2.0",
     "node": ">=4.2.0"
