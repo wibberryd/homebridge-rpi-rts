@@ -130,4 +130,4 @@ Those files should not be lost because there is no way to recover the rolling co
 - [Pushstack](https://pushstack.wordpress.com/somfy-rts-protocol/) for a detailed description of the Somfy RTS protocol.
 - [joan2937](https://github.com/joan2937/pigpio) for the pigpio C library.
 - [fivdi](https://github.com/fivdi/pigpio) for the pigpio javascript wrapper.
-- [Nickduino](https://github.com/Nickduino/Pi-Somfy) for a python implementation of the Somfy RTS protocol
+- [Nickduino](https://github.com/Nickduino/Pi-Somfy) for a python implementation of the Somfy RTS protocol.
