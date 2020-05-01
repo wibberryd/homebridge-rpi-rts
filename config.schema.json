@@ -1,0 +1,26 @@
+{
+	"pluginAlias": "Somfy RTS Remote",
+	"pluginType": "accessory",
+	"singular": false,
+	"schema": {
+		"type": "object",
+		"properties": {
+			"name": {
+				"title": "Name",
+				"description": "The name of the accessory as it will appear in Apple Home App",
+				"type": "string",
+				"default": "Shutter 1",
+				"required": true
+			},
+			"id": {
+				"title": "ID",
+				"description": "The unique ID of the virtual Somfy RTS remote. This ID will be stored by the Somfy accessories (shutters, ...) during the prog phase. Any change to this ID will require a new prog phase to be recognized by the Somfy accessories.",
+				"type": "integer",
+				"default": 1000001,
+				"required": true,
+				"minimum": 0,
+				"maximum": 16777216
+			}
+		}
+	}
+}
