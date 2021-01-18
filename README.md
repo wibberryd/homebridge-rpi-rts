@@ -9,7 +9,7 @@ This [Homebridge](https://github.com/homebridge/homebridge) plugin allows to con
 - Raspberry Pi (tested with 4B, but should work with any version)
 - 433 MHz RF transmitter [like this](https://i.pinimg.com/474x/cb/47/a8/cb47a81619e16eb344d89ee03a382dc1.jpg)
 - 433.42 MHz saw resonator (.42 is important)
-- Any 17 cm antenna
+- Any 17 cm antenna (a straight, 17 cm piece of regular copper wire works well)
 - 3 female to female jumper wires
 
 ### 1.2. Modification of the transmitter
@@ -28,7 +28,7 @@ Using the female to female jumper wires, connect the transmitter to the [Raspber
 ## 2. Software setup
 
 ### 2.1. Raspberry Pi setup
-If your Raspberry Pi is not setup yet, follow the [official documentation](https://www.raspberrypi.org/documentation/) to install a Raspbian OS of your choice. For a Homebridge server, a Raspbian Lite version (i.e. without Graphical User Interface) with SSH enabled to control the Raspberry Pi remotely from another computer is good starting point.
+If your Raspberry Pi is not setup yet, follow the [official documentation](https://www.raspberrypi.org/documentation/) to install a Raspberry Pi OS of your choice. For a Homebridge server, a Raspberry Pi OS Lite version (i.e. without Graphical User Interface) with SSH enabled to control the Raspberry Pi remotely from another computer is good starting point.
 
 Install Node.js, Homebridge and Homebridge Config UI X according to [those instructions](https://github.com/homebridge/homebridge/wiki/Install-Homebridge-on-Raspbian).
 
