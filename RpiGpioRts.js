@@ -72,7 +72,7 @@ class RpiGpioRts {
 	 * @method saveRollingCode
 	*/
 	saveRollingCode() {
-		fs.writeFile(`./${this.id}.txt`, this.rollingCode, (err) => {
+		fs.writeFile(`./${this.id}.txt`, this.rollingCode.toString(), (err) => {
 			if (err) throw err;
 		});
 		this.log.debug(`Saved rolling code ${this.rollingCode} in file ./${this.id}.txt`);
