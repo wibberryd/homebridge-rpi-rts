@@ -30,13 +30,21 @@ class SomfyRtsRemoteAccessory {
 		this.config = config;
 		this.emitter = new RpiGpioRts(log, config);
 		
+		// Delay to reset the switch after being pressed
 		this.delay = 500;
 		
-		this.states = { 'Up': false, 'Down': false, 'My': false, 'Prog': false };
+		this.buttons = ['Up', 'Down', 'My'];
+		if (this.config.prog === true) this.buttons.push('Prog');
+		
+		// Create an object such as {'Up': false, 'Down': false, ...}
+		this.states = this.buttons.reduce((acc, cur) => {
+			acc[cur] = false;
+			return acc;
+		}, {});
 		
 		this.switchServices = {};
 		
-		['Up', 'Down', 'My', 'Prog'].forEach(button => {
+		this.buttons.forEach(button => {
 		
 			this.switchServices[button] = new Service.Switch(`${this.config.name} ${button}`, button);
 			
