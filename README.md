@@ -114,6 +114,20 @@ sudo systemctl daemon-reload
 sudo hb-service restart
 ```
 
+### Update: Running Homebridge as root after May 2022 update
+In early May 2022 Homebridge [changed some paths](https://github.com/homebridge/homebridge/wiki/Install-Homebridge-on-Raspbian#configuration-reference). So if you're using a newer version of homebridge, the steps you need to take to run homebridge as root are as follows:
+1. From the command line, run `sudo systemctl edit homebridge`.
+2. Change the configuration file to the following
+```
+[Service]
+User=root
+ExecStart=    # a blank ExecStart is required to override
+ExecStart=/opt/homebridge/start.sh --allow-root
+```
+Then save the file and exit the editor.
+
+3. Now restart homebridge by running `sudo systemctl restart homebridge`
+
 ## Configuration
 Each Somfy device listens to a list of remotes that were previously registered on this device.
 
